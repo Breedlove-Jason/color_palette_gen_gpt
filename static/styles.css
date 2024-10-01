@@ -1,0 +1,112 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1e21;
+  color: #e4e4e4;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the title and form */
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Keeps it above the color columns */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #b8c1ec;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #c1c7e3;
+}
+
+input[type='text'] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+  border: 2px solid #6c757d;
+  border-radius: 5px;
+  background-color: #282a2e;
+  color: #e4e4e4;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4e69d9;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a54b2;
+}
+
+/* Color columns */
+.palette-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.color-column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  cursor: pointer;
+  position: relative;
+}
+
+.color-column span {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.color-column:hover {
+  filter: brightness(0.8);
+}
+
+.color-column:hover span {
+  background-color: rgba(0, 0, 0, 0.7);
+}
